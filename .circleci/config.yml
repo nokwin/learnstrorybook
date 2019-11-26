@@ -21,5 +21,4 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
 
-      - run: yarn test
       - run: yarn chromatic test --app-code=$CHROMATIC_APP_CODE --exit-zero-on-changes
